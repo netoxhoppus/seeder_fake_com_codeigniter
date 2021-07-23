@@ -1,0 +1,28 @@
+ERROR - 2021-07-22 09:13:36 --> Unknown column 'id' in 'field list'
+ERROR - 2021-07-22 09:50:30 --> Duplicate entry '7' for key 'PRIMARY'
+ERROR - 2021-07-22 09:50:56 --> Error connecting to the database: Unknown database 'SistemaHospitalar'
+CRITICAL - 2021-07-22 09:50:56 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'SistemaHospitalar'
+#0 /home/netox/git/Seeder-Fake-php/vendor/codeigniter4/framework/system/Database/Database.php(87): CodeIgniter\Database\BaseConnection->initialize()
+#1 /home/netox/git/Seeder-Fake-php/vendor/codeigniter4/framework/system/Database/Config.php(117): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#2 /home/netox/git/Seeder-Fake-php/vendor/codeigniter4/framework/system/Database/Seeder.php(101): CodeIgniter\Database\Config::forge(NULL)
+#3 /home/netox/git/Seeder-Fake-php/vendor/codeigniter4/framework/system/Commands/Database/Seed.php(73): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+#4 /home/netox/git/Seeder-Fake-php/vendor/codeigniter4/framework/system/CLI/Commands.php(67): CodeIgniter\Commands\Database\Seed->run(Array)
+#5 /home/netox/git/Seeder-Fake-php/vendor/codeigniter4/framework/system/CLI/CommandRunner.php(71): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#6 /home/netox/git/Seeder-Fake-php/vendor/codeigniter4/framework/system/CLI/CommandRunner.php(56): CodeIgniter\CLI\CommandRunner->index(Array)
+#7 /home/netox/git/Seeder-Fake-php/vendor/codeigniter4/framework/system/CodeIgniter.php(924): CodeIgniter\CLI\CommandRunner->_remap('index', 'db:seed', 'Play')
+#8 /home/netox/git/Seeder-Fake-php/vendor/codeigniter4/framework/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#9 /home/netox/git/Seeder-Fake-php/vendor/codeigniter4/framework/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/netox/git/Seeder-Fake-php/vendor/codeigniter4/framework/system/CLI/Console.php(61): CodeIgniter\CodeIgniter->run()
+#11 /home/netox/git/Seeder-Fake-php/spark(65): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2021-07-22 18:02:14 --> Cannot add or update a child row: a foreign key constraint fails (`SistemaHospitalar`.`diagnosticos`, CONSTRAINT `fk_exame_diagnostico` FOREIGN KEY (`exameId`) REFERENCES `exames` (`id`))
+ERROR - 2021-07-22 18:15:47 --> Unknown column 'celular' in 'field list'
+ERROR - 2021-07-22 18:16:03 --> Unknown column 'genero' in 'field list'
+ERROR - 2021-07-22 18:27:23 --> Duplicate entry '3' for key 'PRIMARY'
+ERROR - 2021-07-22 18:39:07 --> Unknown column 'usuario' in 'field list'
+ERROR - 2021-07-22 18:39:27 --> Duplicate entry '\x01' for key 'uq_uk_isativo'
+ERROR - 2021-07-22 18:40:08 --> Duplicate entry '\x00' for key 'uq_uk_isativo'
+ERROR - 2021-07-22 18:40:54 --> Duplicate entry '\x00' for key 'uq_uk_isativo'
+ERROR - 2021-07-22 20:01:36 --> Duplicate entry 'Uniodonto' for key 'uq_convenios'
+ERROR - 2021-07-22 20:10:03 --> Cannot add or update a child row: a foreign key constraint fails (`SistemaHospitalar`.`visitas`, CONSTRAINT `fk_visitas_internacao` FOREIGN KEY (`internacaoId`) REFERENCES `internacao` (`id`))
